@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form method="post" action="submitData.php">
+            <h2>Registration Form</h2>
+
+            <div class="form-control">
+                <label for="fname">
+                    First Name: <input type="text" placeholder="Enter your first name" id="fname" name="fname" onkeyup="validateFname()">
+                </label>
+                <span id="fname-error" class="error"></span>    
+            </div>
+
+            <div class="form-control">
+                <label for="lname">
+                    Last Name: <input type="text" placeholder="Enter your last name" id="lname" name="lname" onkeyup="validateLname()">
+                </label>
+                <span id="lname-error" class="error"></span>    
+            </div>
+
+            <div class="form-control">
+                <label for="dob">
+                    Date of Birth: <input type="number" id="dob" name="dob" onkeyup="validateDOB()">
+                </label>
+                <span id="dob-error" class="error"></span>    
+            </div>
+
+            <div class="form-control">
+                <label for="address">
+                    Address: <input type="text" placeholder="Enter your address" id="address" name="address" onkeyup="validateAddress()">
+                </label>
+                <span id="address-error" class="error"></span>    
+            </div>
+
+            <div class="form-control">
+                <label for="phone">
+                    Phone: <input type="number" placeholder="Enter your phone number" id="phone" name="phone" onkeyup="validatePhone()">
+                </label>
+                <span id="phone-error" class="error"></span>    
+            </div>
+
+            <div class="form-control">
+                <label for="email">
+                    Email: <input type="email" placeholder="Enter your email" id="email" name="email" onkeyup="validateEmail()">
+                </label>
+                <span id="email-error" class="error"></span>    
+            </div>
+            
+            <div class="form-control">
+                <label for="password">
+                    Password: <input type="password" placeholder="Enter your password" id="password" name="password" onkeyup="validatePassword()">
+                </label>
+                <span id="password-error" class="error"></span>    
+            </div>
+            
+            <input type="submit" name="submit" id="submit" onclick="return validateForm()">
+            <span id="validation-error" class="error"></span>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+            <ul>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
